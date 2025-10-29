@@ -13,7 +13,7 @@ public class Diapositiva12 {
 	}
 	
 	public static void funcionRara(Scanner s) {
-		s.next();
+		s.close();
 	}
 
 	
