@@ -6,6 +6,12 @@ public class Diapositiva24 {
 	
 	public static void main(String[] args) {
 		
+		/*
+		 * Distinguimos entre una función y otra a la hora de llamarla, mediante
+		 * los parámetros que le pasamos. 
+		 */
+		pedirNumero(10, 20);
+		
 	}
 	
 	public static int pedirNumero() {
