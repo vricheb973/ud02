@@ -1,4 +1,4 @@
-package unidad02.ejemplos;
+package unidad02.ejercicios;
 
 public class Diapositiva21 {
 	
