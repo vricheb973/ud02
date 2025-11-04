@@ -15,7 +15,6 @@ public class Diapositiva17 {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Dime un número:");
 		int n1 = sc.nextInt();
-		sc.close();
 		
 		return n1;
 	}
