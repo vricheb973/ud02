@@ -7,7 +7,7 @@ public class Complejidad {
 
 	public static void main(String[] args) {
 
-		Complejidad.adivinaNumero();
+		Complejidad.numerosAfortunados();
 
 	}
 	
@@ -55,10 +55,84 @@ public class Complejidad {
 	}
 
 	public static void numerosAfortunados() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Dime un número: ");
+		int numero = sc.nextInt();
+		
+		int buenaSuerte = 0;
+		int malaSuerte = 0;
+		int aux = numero;
+		
+		while(numero > 0) {
+			int digito = numero % 10;
+			
+			if(digito == 3 || digito == 7 || digito == 8 || digito == 9) {
+				buenaSuerte++;
+			}
+			else {
+				malaSuerte++;
+			}
+			
+			numero = numero / 10;
+		}
+		
+		if(buenaSuerte > malaSuerte) {
+			System.out.println("El " + aux + " es afortunado. ");
+		}
+		else {
+			System.out.println("El " + aux + " no es afortunado. ");
+		}
+		
 		
 	}
 
 	public static void validaPassword() {
+		
+		Scanner sc = new Scanner(System.in);
+		int mayus = 0;
+		int minus = 0;
+		int numeros = 0;
+		int especiales = 0;
+		
+		System.out.println("Ingrese una contraseña: ");
+		String password = sc.next();
+		
+		// antoniodet
+		// 0123456789
+		for(int i=0; i < password.length(); i++) {
+			String caracter = password.substring(i, i+1); 
+			
+			if(caracter.matches("[a-z]")) {
+				
+			}
+			else if(caracter.matches("[A-Z]")) {
+				
+				
+			}
+		}
+		
+		
+		
+		// 10 caracteres
+		
+		// 2 mayus
+		
+		// 2 minus
+		
+		// 2 num
+		
+		// 2 esp
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 }
