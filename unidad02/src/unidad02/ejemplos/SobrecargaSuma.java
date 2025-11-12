@@ -23,11 +23,11 @@ public class SobrecargaSuma {
 	/*
 	 * El nombre de los parámetros no importa, Java solo se fija en los tipos (int, int)
 	 */
-	public static double suma(int a2, int b2){
-		int suma;
-		suma= a+b+c;
-		return(suma);
-	}
+//	public static double suma(int a2, int b2){
+//		int suma;
+//		suma= a+b+c;
+//		return(suma);
+//	}
 
 	//función sobrecargada
 	public static double suma(int a, double pesoA, int b, double pesoB){
