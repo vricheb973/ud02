@@ -24,7 +24,7 @@ public class Complejidad {
 		Scanner sc = new Scanner(System.in);
 		Random r = new Random();
 		int aleatorio = r.nextInt(1, 101);
-		int intentos = 3;
+		int intentos = 10;
 		int numero;
 		
 		do {
@@ -35,7 +35,7 @@ public class Complejidad {
 			
 			if(numero == aleatorio) {
 				System.out.println("Has acertado.");
-				System.out.println("Lo has acertado en " + (3-intentos) + " intentos.");
+				System.out.println("Lo has acertado en " + (10-intentos) + " intentos.");				
 			}
 			else if(aleatorio > numero && intentos > 0) {
 				System.out.println("El número que tienes que adivinar es mayor. ");
@@ -74,6 +74,7 @@ public class Complejidad {
 		int aux = numero;
 		
 		while(numero > 0) {
+			//El resto del número dividido entre 10 es la cifra más a la derecha
 			int digito = numero % 10;
 			
 			if(digito == 3 || digito == 7 || digito == 8 || digito == 9) {
@@ -83,6 +84,7 @@ public class Complejidad {
 				malaSuerte++;
 			}
 			
+			//Elimino la cifra que se encuentra a la derecha
 			numero = numero / 10;
 		}
 		
@@ -110,15 +112,19 @@ public class Complejidad {
 	 * 		matches("[@#*%&/]") - Devuelve true si contiene un carácter especial.
 	 */
 
-	public static void validaPassword() {
-		
+	public static void validaPassword() {		
 		Scanner sc = new Scanner(System.in);
-		int mayus = 0;
-		int minus = 0;
-		int numeros = 0;
-		int especiales = 0;
+		int mayus;
+		int minus;
+		int numeros;
+		int especiales;
 		String password;
 		do {
+			mayus = 0;
+			minus = 0;
+			numeros = 0;
+			especiales = 0;
+			
 			System.out.println("Ingrese una contraseña: ");
 			password = sc.next();
 			
