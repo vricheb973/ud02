@@ -19,7 +19,6 @@ public class Diapositiva53 {
 //			System.out.println(numero + " x " + i + " = " + (numero*i));
 		}
 		
-		
 		sc.close();
 	}
 
