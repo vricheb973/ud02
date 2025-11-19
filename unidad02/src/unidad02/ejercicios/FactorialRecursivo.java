@@ -1,6 +1,6 @@
-package unidad02.ejemplos.recursividad;
+package unidad02.ejercicios;
 
-public class Factorial {
+public class FactorialRecursivo {
 
 	public static void main(String[] args) {
 
