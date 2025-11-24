@@ -1,4 +1,4 @@
-package ejerciciosUD03.complejidad;
+package ejerciciosUD03.boletin1;
 
 public class Main {
 
