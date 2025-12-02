@@ -1,5 +1,7 @@
 package ejerciciosUD03.boletin3;
 
+import java.util.Random;
+
 public class Actividad05 {
 
 	public static void main(String[] args) {
@@ -15,7 +17,8 @@ public class Actividad05 {
 		for (int i = 1; i <= 15; i++) {
 			System.out.printf("P%d\t", i);
 			for (int j = 0; j < 3; j++) {
-				int aleatorio = (int) (Math.random() * 6) + 1;
+				Random r = new Random();
+				int aleatorio = r.nextInt(1, 6+1);
 				switch (aleatorio) {
 				case 1:
 				case 2:
@@ -33,7 +36,7 @@ public class Actividad05 {
 					System.err.println("Esto no puede pasar en la vida");
 				}
 			}
-			System.out.println("");
+			System.out.println();
 
 		}
 	}

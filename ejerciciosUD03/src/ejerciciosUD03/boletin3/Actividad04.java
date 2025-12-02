@@ -1,5 +1,6 @@
 package ejerciciosUD03.boletin3;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Actividad04 {
@@ -31,12 +32,13 @@ public class Actividad04 {
 		System.out.println("            @");
 		int espacios = 12; // Variable auxiliar para guardar los espacios
 		for (int i = 0; i < longitud; i++) {
-			int movimiento = (int) (Math.random() * 3) - 1; // Aleatorio entre -1 y 1 (otra version del random)
+			Random r = new Random();
+			int movimiento = r.nextInt(-1, 2); // Aleatorio entre -1 y 1
 			espacios = espacios + movimiento;
 			for (int j = 0; j < espacios; j++) {
 				System.out.print(" ");
 			}
-			System.out.print("* \n");
+			System.out.println("*");
 		}
 
 		sc.close();

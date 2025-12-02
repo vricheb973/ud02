@@ -16,24 +16,33 @@ public class Actividad02 {
 
 		int altura;
 
-		System.out.println("El tamaño de la U sera de: ");
-		altura = sc.nextInt();
-
-		System.out.println("La U quedaria asi: ");
-
-		for (int i = 0; i < altura - 1; i++) {
+		do {
+			System.out.println("El tamaño de la U sera de: ");
+			altura = sc.nextInt();
+		}
+		while(altura<=2);
+		
+		for(int i=0; i<altura-1; i++) {
 			System.out.print("*");
-
-			for (int j = 0; j < altura - 2; j++) {
+			
+			for(int j=0; j<altura-2; j++) {
 				System.out.print(" ");
 			}
+
 			System.out.println("*");
 		}
+		
+		// Dibujo la base
 		System.out.print(" ");
-		for (int i = 0; i < altura - 2; i++) {
+		
+		for(int i=0; i<altura-2; i++) {
 			System.out.print("*");
 		}
+
 		System.out.println(" ");
+
+	
+		sc.close();
 	}
 
 }

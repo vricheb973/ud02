@@ -9,12 +9,18 @@ public class Actividad03 {
 		 * Programa que sea capaz de insertar un dígito dentro de un número indicando la
 		 * posición. El nuevo dígito se colocará en la posición indicada y el resto de
 		 * dígitos se desplazará hacia la derecha. Las posiciones se cuentan de
-		 * izquierda a derecha empezando por el 1. Ejemplo: Por favor, introduzca un
-		 * número entero positivo: 406783 Introduzca la posición donde quiere insertar:
-		 * 3 Introduzca el dígito que quiere insertar: 5 El número resultante es
-		 * 4056783. Entradas: numero (long), posicion, digito (int) Salidas:
-		 * numeroCambiado (long)
+		 * izquierda a derecha empezando por el 1. 
+		 * Ejemplo: 
+		 * 
+		 * Por favor, introduzca un número entero positivo: 406783 
+		 * Introduzca la posición donde quiere insertar: 3 
+		 * Introduzca el dígito que quiere insertar: 5 
+		 * El número resultante es 4056783. 
+		 * 
+		 * Entradas: numero (long), posicion, digito (int) Salidas: numeroCambiado (long)
 		 */
+		
+		versionUsandoModuloDivision();
 
 	}
 
@@ -56,7 +62,8 @@ public class Actividad03 {
 		long parteDer = numero % corte; // Guardamos la parte a la derecha de la posicion
 		parteIzq = (parteIzq * 10 + digito) * corte; // Desplazo 1 a la izquierda, sumo el digito y añado ceros para
 														// poder sumar la parte derecha
-
+		
+		
 		numeroCambiado = parteIzq + parteDer;
 
 		System.out.printf("El número resultante es %d \n", numeroCambiado);
@@ -80,7 +87,7 @@ public class Actividad03 {
 			System.out.print("Dime el digito que quieres insertar: ");
 			digito = sc.nextInt();
 		} while (numero <= 0 || posicion <= 0);
-
+		
 		// Convertimos el número a String
 		resultado = numero.toString().substring(0, posicion - 1) + digito
 				+ numero.toString().substring(posicion - 1, numero.toString().length());

@@ -11,8 +11,9 @@ public class Actividad01 {
 		 * el |||| - ||||||| - - || - | en el sistema de palotes. Entradas: numero (int)
 		 * Salidas: (String)
 		 */
-
-		versionConcatenandoPorLaIzquierda();
+		
+		
+		
 	}
 
 	public static void versionConcatenandoPorLaIzquierda() {
@@ -83,6 +84,36 @@ public class Actividad01 {
 		
 		System.out.println();
 
+		sc.close();
+	}
+	
+	public static void usandoString() {
+		Scanner sc = new Scanner(System.in);
+
+		int numero;
+		String conversion = "";
+
+		do {
+			System.out.print("Dime un número: ");
+			numero = sc.nextInt();
+		} while (numero <= 0);
+		
+		String aux = ""+numero;
+		
+		for(int i=0; i<aux.length(); i++) {
+			int digito = Integer.valueOf(aux.substring(i, i+1));
+			
+			for(int j=0; j<digito; j++) {
+				System.out.print("|");
+			}
+			
+			if(i<aux.length()-1) {
+				System.out.print("-");
+			}
+		}
+		
+		System.out.println(conversion);
+		
 		sc.close();
 	}
 
